@@ -19,7 +19,7 @@ ul{
     margin: 0;
     list-style: none;
 }
-h1,h2,h3{
+h1,h2,h3,p{
     margin: 0;
 }
 
@@ -29,10 +29,39 @@ h1,h2,h3{
 
 main{
     position: relative;
-    padding-top: 27%;
+    padding-top: calc(100vh * 0.43);
     background-image: url(../img/background-home-desktop.jpg);
     background-position: 0 0;
     background-repeat: no-repeat;
     height: 100vh;
-    color: #fff;
+    color: $white;
+}
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+.main-text{
+    max-width: 450px;
+}
+.main-subtitle{
+    @include Heading5;
+}
+.main-title{
+    @include Heading1;
+}
+.main-description{
+    @include BodyText;
+}
+.main-button {
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Heading4;
+    color: $dark;
+    letter-spacing: 2px;
+  
 }

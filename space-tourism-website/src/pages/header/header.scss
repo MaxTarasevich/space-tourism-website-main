@@ -16,6 +16,7 @@
     font-size: 16px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
+    @include NavText;
 }
 .header-nav ul{
     display: flex;
@@ -25,6 +26,9 @@
 .header-nav ul li{
     margin: 0 1.5em;
 }
+.header-nav ul li span{
+    font-weight: bold;
+}
 .header-nav::before{
     top:50%;
     left:-52%;
@@ -33,7 +37,7 @@
     position: absolute;
     height: 1px;
     width: 57%;
-    background-color: #fff;
+    background-color: $white;
     opacity: 0.25;
 
 }
