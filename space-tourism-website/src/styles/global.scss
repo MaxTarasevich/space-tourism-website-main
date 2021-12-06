@@ -22,7 +22,9 @@ ul{
 h1,h2,h3,p{
     margin: 0;
 }
-
+img{
+    width: 100%;
+}
 
 
 
@@ -53,6 +55,7 @@ main{
     @include BodyText;
 }
 .main-button {
+    position: relative;
     width: 274px;
     height: 274px;
     border-radius: 50%;
@@ -63,5 +66,40 @@ main{
     @include Heading4;
     color: $dark;
     letter-spacing: 2px;
-  
+  z-index: 4;
+}
+.main-button::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0.1;
+  transition: background 0.3s ease-in;
+  z-index: 1;
+}
+.main-button:hover::after{
+    background:$white;
+}
+
+/*Destination*/
+.destination{
+    height: 100vh;
+    padding-top: 15%;
+    background-image: url(../img/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.destination-title{
+    @include Heading5;
+    color: $white;
+    text-transform: uppercase;
+}
+.destination-title span{
+    font-weight: bold;
+    opacity: 0.25;
 }

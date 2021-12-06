@@ -12,7 +12,6 @@
 .header-nav{
     position: relative;
     width: 58%;
-    padding: 2.45em 0px;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
@@ -25,9 +24,21 @@
 }
 .header-nav ul li{
     margin: 0 1.5em;
+    padding: 2.45em 0px;
+    border-bottom: 3px solid transparent;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.header-nav ul li:hover{
+    border-bottom: 3px solid $white;
+    opacity: 0.5;
 }
 .header-nav ul li span{
     font-weight: bold;
+}
+.header-nav ul li.active{
+    border-bottom: 3px solid $white;
 }
 .header-nav::before{
     top:50%;
